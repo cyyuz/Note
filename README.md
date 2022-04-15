@@ -4,7 +4,6 @@ yum -y install gdb     //安装
 gcc -g -o name name.c
 gdb name
 ```
-调试命令
 |  命令  | 缩写  | 说明  |
 |  ----  | ----  |  ---- |
 | break  | b     |  设置断点，b n  |
