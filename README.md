@@ -17,3 +17,18 @@ gdb name
 |  ----  | ----  | 
 | Esc  | 从编辑模式到命令模式     | 
 
+# C语言文件操作
+
+```c
+FILE *  //文件指针
+FILE *fopen( const char * filename, const char * mode ); // 打开文件
+int fclose(FILE *fp); // 关闭文件
+
+
+int fprintf(FILE *fp, const char *format, ...);    //文本文件 写
+char *fgets(char *buf, int size, FILE *fp);  // 文本文件读
+
+ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);  //二进制文件 写
+ size_t fread(void *ptr, size_t size, size_t nmemb, FILE *fp);     // 二进制文件 读
+```
+
