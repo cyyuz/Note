@@ -29,7 +29,7 @@ select database();             // 查看当前使用的是哪个数据库
 		<tr>
 		<td>DDL</td>
 		<td>数据定义语言</td>
-		<td>行三</td>
+		<td>create新建、drop删除、alter修改</td>
 	</tr>
 	<tr>
 		<td>TCL</td>
