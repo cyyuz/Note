@@ -10,6 +10,41 @@ show tables;                   // 查看某个数据库下有哪些表
 select version();              // 查看mysql数据库的版本号
 select database();             // 查看当前使用的是哪个数据库
 ```
+<table>
+	<tr>
+		<th>标题一</th>
+		<th>标题二</th>
+		<th>标题三</th>
+	<tr/>
+	<tr>
+		<td>DQL</td>
+		<td>行一</td>
+		<td>行一</td>
+	</tr>
+	<tr>
+		<td>DML</td>
+		<td>行二</td>
+		<td>行二</td>
+	</tr>
+		<tr>
+		<td>DDL</td>
+		<td>行三</td>
+		<td>行三</td>
+	</tr>
+	<tr>
+		<td>TCL</td>
+		<td>行二</td>
+		<td>行二</td>
+	</tr>
+	<tr>
+		<td>DL</td>
+		<td>行三</td>
+		<td>行三</td>
+	</tr>
+</table>
+
+
+
 
 ```
 DQL： 数据查询语言（带有select关键字的都是查询语句）
