@@ -19,12 +19,12 @@ select database();             // 查看当前使用的是哪个数据库
 	<tr>
 		<td>DQL</td>
 		<td>数据查询语言</td>
-		<td>行一</td>
+		<td>select查</td>
 	</tr>
 	<tr>
 		<td>DML</td>
 		<td>数据操作语言</td>
-		<td>行二</td>
+		<td>insert增、delete删、update改</td>
 	</tr>
 		<tr>
 		<td>DDL</td>
@@ -34,12 +34,12 @@ select database();             // 查看当前使用的是哪个数据库
 	<tr>
 		<td>TCL</td>
 		<td>事务控制语言</td>
-		<td>行二</td>
+		<td>事务提交commit、事务回滚rollback</td>
 	</tr>
 	<tr>
 		<td>DL</td>
 		<td>数据控制语言</td>
-		<td>行三</td>
+		<td>授权grant、撤销权限revoke</td>
 	</tr>
 </table>
 
