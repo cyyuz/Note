@@ -12,33 +12,33 @@ select database();             // 查看当前使用的是哪个数据库
 ```
 <table>
 	<tr>
-		<th>标题一</th>
-		<th>标题二</th>
-		<th>标题三</th>
+		<th>分类</th>
+		<th>描述</th>
+		<th>命令</th>
 	<tr/>
 	<tr>
 		<td>DQL</td>
-		<td>行一</td>
+		<td>数据查询语言</td>
 		<td>行一</td>
 	</tr>
 	<tr>
 		<td>DML</td>
-		<td>行二</td>
+		<td>数据操作语言</td>
 		<td>行二</td>
 	</tr>
 		<tr>
 		<td>DDL</td>
-		<td>行三</td>
+		<td>数据定义语言</td>
 		<td>行三</td>
 	</tr>
 	<tr>
 		<td>TCL</td>
-		<td>行二</td>
+		<td>事务控制语言</td>
 		<td>行二</td>
 	</tr>
 	<tr>
 		<td>DL</td>
-		<td>行三</td>
+		<td>数据控制语言</td>
 		<td>行三</td>
 	</tr>
 </table>
