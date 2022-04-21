@@ -17,14 +17,14 @@ select database();             // 查看当前使用的是哪个数据库
 		<th>命令</th>
 	<tr/>
 	<tr>
-		<td>      DQL     	</td>
-		<td>数据查询语言</td>
-		<td>select查</td>
+		<td>	DQL	   				</td>
+		<td>	数据查询语言				</td>
+		<td>	select查		<tr>	</tr><tr>	</tr></td>
 	</tr>
 	<tr>
-		<td>DML</td>
-		<td>数据操作语言</td>
-		<td>insert增、delete删、update改</td>
+		<td>	DML						</td>
+		<td>	数据操作语言					</td>
+		<td>	insert增、delete删、update改			</td>
 	</tr>
 		<tr>
 		<td>DDL</td>
