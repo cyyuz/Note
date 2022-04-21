@@ -17,7 +17,7 @@ select database();             // 查看当前使用的是哪个数据库
 		<th>命令</th>
 	<tr/>
 	<tr>
-		<td>DQL</td>
+		<td>      DQL     	</td>
 		<td>数据查询语言</td>
 		<td>select查</td>
 	</tr>
