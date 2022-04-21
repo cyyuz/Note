@@ -19,7 +19,7 @@ select database();             // 查看当前使用的是哪个数据库
 	<tr>
 		<td>	DQL	   				</td>
 		<td>	数据查询语言				</td>
-		<td>	select查		<tr>	</tr><tr>	</tr></td>
+		<td>	select查		<tr>	D</tr><tr>	D</tr></td>
 	</tr>
 	<tr>
 		<td>	DML						</td>
