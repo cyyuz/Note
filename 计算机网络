@@ -1,0 +1,27 @@
+<table>
+    <tr>
+        <td>  OSI  </td> 
+        <td>  TCP/IP  </td> 
+        <td>  数据包  </td> 
+        <td>  功能  </td> 
+   </tr>
+    
+    <tr>
+        <td>  ⑦应用层  </td>    
+  		  <td>  ④应用层 </td> 
+        <td>   报文 </td> 
+        <td>  解决通过应用进程之间的交互来实现特定网络应用的问题 </td> 
+    </tr>
+    <tr>
+        <td>  ⑥表示层</td> 
+        <td rowspan="2">   </td> 
+        <td rowspan="2">   </td> 
+        <td>解决通信双方交换信息的表示问题</td>    
+    </tr>
+    <tr>
+        <td> ⑤会话层</td> 
+        <td rowspan="2">   </td> 
+        <td rowspan="2">   </td> 
+        <td>解决进程之间进行会话问题</td>    
+    </tr>
+</table>
