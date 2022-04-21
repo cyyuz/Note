@@ -19,7 +19,7 @@ select database();             // 查看当前使用的是哪个数据库
 	<tr>
 		<td>	DQL	   				</td>
 		<td>	数据查询语言				</td>
-		<td>	select查		<tr>	D</tr><tr>	D</tr></td>
+		<td>	select查		</td>
 	</tr>
 	<tr>
 		<td>	DML						</td>
@@ -41,6 +41,22 @@ select database();             // 查看当前使用的是哪个数据库
 		<td>数据控制语言</td>
 		<td>授权grant、撤销权限revoke</td>
 	</tr>
+</table>
+
+<table>
+	<tr>
+		<th>分类</th>
+		<tr>
+			<th>分类</th>
+			<th>描述</th>
+			<th>命令</th>
+		<tr/>
+		<tr>
+			<th>分类</th>
+			<th>描述</th>
+			<th>命令</th>
+		<tr/>
+	<tr/>
 </table>
 
 ## DQL
