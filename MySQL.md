@@ -45,16 +45,14 @@ select database();             // 查看当前使用的是哪个数据库
 
 <table>
 	<tr>
-		<th>分类</th>
+		<th> 1 </th>
 		<tr>
-			<th>分类</th>
-			<th>描述</th>
-			<th>命令</th>
+			<th>2</th>
+			<th>3</th>
 		<tr/>
 		<tr>
-			<th>分类</th>
-			<th>描述</th>
-			<th>命令</th>
+			<th>3</th>
+			<th>4</th>
 		<tr/>
 	<tr/>
 </table>
