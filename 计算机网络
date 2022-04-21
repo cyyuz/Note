@@ -4,6 +4,42 @@
 		<th>描述</th>
 		<th>命令</th>
 	<tr/>
+	<tr>
+		<td>	DQL	   				</td>
+		<td>	数据查询语言				</td>
+		<td>	select查		</td>
+	</tr>
+	<tr>
+		<td>	DML						</td>
+		<td>	数据操作语言					</td>
+		<td>	insert增、delete删、update改			</td>
+	</tr>
+		<tr>
+		<td>DDL</td>
+		<td>数据定义语言</td>
+		<td>create新建、drop删除、alter修改</td>
+	</tr>
+	<tr>
+		<td>TCL</td>
+		<td>事务控制语言</td>
+		<td>事务提交commit、事务回滚rollback</td>
+	</tr>
+	<tr>
+		<td>DL</td>
+		<td>数据控制语言</td>
+		<td>授权grant、撤销权限revoke</td>
+	</tr>
+</table>
+
+
+
+
+<table>
+	<tr>
+		<th>分类</th>
+		<th>描述</th>
+		<th>命令</th>
+	<tr/>
 </table>
 
     <tr>
