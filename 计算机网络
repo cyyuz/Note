@@ -4,8 +4,8 @@
         <td>  TCP/IP  </td> 
         <td>  数据包  </td> 
         <td>  功能  </td> 
-   </tr>
- </table> 
+   <tr/>
+
     <tr>
         <td>  ⑦应用层  </td>    
   		  <td>  ④应用层 </td> 
