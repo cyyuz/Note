@@ -43,19 +43,7 @@ select database();             // 查看当前使用的是哪个数据库
 	</tr>
 </table>
 
-<table>
-	<tr>
-		<th> 1 </th>
-		<tr>
-			<th>2</th>
-			<th>3</th>
-		<tr/>
-		<tr>
-			<th>3</th>
-			<th>4</th>
-		<tr/>
-	<tr/>
-</table>
+
 
 ## DQL
 ```
