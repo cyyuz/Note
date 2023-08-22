@@ -157,7 +157,7 @@
         <th colspan="1"> 在光标所在行的行末插入 </th>
     </tr>
     <tr> <!-- 注释 -->
-        <th rowspan="6"> 剪切|复制|粘贴 </th>
+        <th rowspan="6"> 剪切</th>
         <th colspan="1">x</th>
         <th colspan="1"> 剪切光标所在位置的一个字符 </th>
     </tr>
@@ -180,5 +180,89 @@
     <tr>
         <th colspan="1">3dd</th>
         <th colspan="1"> 剪切光标所在行开始的3行 </th>
+    </tr>
+        <tr> <!-- 注释 -->
+        <th rowspan="2"> 复制</th>
+        <th colspan="1">yy</th>
+        <th colspan="1"> 光标所在行复制到缓冲区 </th>
+    </tr>
+    <tr>
+        <th colspan="1">3yy</th>
+        <th colspan="1"> 光标所在行开始的3行复制到缓冲区 </th>
+    </tr>
+    </tr>
+        <tr> <!-- 注释 -->
+        <th rowspan="2"> 粘贴</th>
+        <th colspan="1">p</th>
+        <th colspan="1"> 将缓冲区里的内容粘贴到光标所在位置 </th>
+    </tr>
+    <tr>
+        <th colspan="1">:set paste</th>
+        <th colspan="1"> 粘贴模式，不自动换行 </th>
+    </tr>
+    </tr>
+        <tr> <!-- 注释 -->
+        <th rowspan="4"> 替换</th>
+        <th colspan="1">r</th>
+        <th colspan="1"> 替换光标所在位置的一个字符 </th>
+    </tr>
+    <tr>
+        <th colspan="1">R</th>
+        <th colspan="1">从光标所在位置开始替换字符，按Esc结束</th>
+    </tr>
+    <tr>
+        <th colspan="1">cw</th>
+        <th colspan="1">从光标所在位置开始替换单词，按Esc结束</th>
+    </tr>
+    <tr>
+        <th colspan="1">:%s/aaa/bbb/g</th>
+        <th colspan="1">把文件中全部的aaa替换成bbb</th>
+    </tr>
+    <tr> <!-- 注释 -->
+        <th rowspan="2"> 可视</th>
+        <th colspan="1">v</th>
+        <th colspan="1"> 把当前行的下一行接到当前行的尾部 </th>
+    </tr>
+    <tr>
+        <th colspan="1">Ctrl+V</th>
+        <th colspan="1">列操作</th>
+    </tr>
+    <tr> <!-- 注释 -->
+        <th rowspan="5"> 退出</th>
+        <th colspan="1">:w</th>
+        <th colspan="1"> 保存 </th>
+    </tr>
+    <tr>
+        <th colspan="1">:w!</th>
+        <th colspan="1">强制保存</th>
+    </tr>
+    <tr>
+        <th colspan="1">:wq | :x</th>
+        <th colspan="1">保存退出</th>
+    </tr>
+    <tr>
+        <th colspan="1">:q</th>
+        <th colspan="1">退出</th>
+    </tr>
+    <tr>
+        <th colspan="1">:q!</th>
+        <th colspan="1">不保存，强制退出</th>
+    </tr>
+    <tr> <!-- 注释 -->
+        <th rowspan="4"> 其他</th>
+        <th colspan="1">J</th>
+        <th colspan="1"> 把当前行的下一行接到当前行的尾部 </th>
+    </tr>
+    <tr>
+        <th colspan="1">Ctrl+g</th>
+        <th colspan="1">显示光标所在位置的行号和文件的总行数</th>
+    </tr>
+    <tr>
+        <th colspan="1">.</th>
+        <th colspan="1">重复执行上一次执行的vi命令</th>
+    </tr>
+    <tr>
+        <th colspan="1">~</th>
+        <th colspan="1">对光标当前所在的位置的字符进行大小写转换</th>
     </tr>
 </table>
