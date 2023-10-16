@@ -33,8 +33,21 @@ geth --datadir ./私链文件夹名 init genesis.json
         <td colspan="1"> 解锁账户 </td>
     </tr>
     <tr> <!-- eth -->
-        <td rowspan="1">eth</td>
+        <td rowspan="4">eth</td>
         <td colspan="1">eth.accounts</td>
-        <td colspan="1"></td>
+        <td colspan="1"> 查询账户列表 </td>
     </tr>
+    <tr>
+        <td colspan="1"> eth.getBalance("address") </td>
+        <td colspan="1"> 获取当前账户余额 </td>
+    </tr>
+    <tr>
+        <td colspan="1"> eth.blockNumber </td>
+        <td colspan="1"> 查询最新区块高度 </td>
+    </tr>
+    <tr>
+        <td colspan="1"> eth.getTransaction("txHash") </td>
+        <td colspan="1"> 查询指定交易信息 </td>
+    </tr>
+   
 </table>
