@@ -35,7 +35,7 @@ geth --datadir ./data1 init genesis.json
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }
 ```
-- Returned error: invalid opcode: SHR    创世区块的genesis.json的问题
+> Returned error: invalid opcode: SHR    创世区块的genesis.json的问题
 
 # 控制台指令
 <table>
