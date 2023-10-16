@@ -83,6 +83,16 @@ geth --datadir ./data1 init genesis.json
         <td colspan="1"> eth.getTransaction("txHash") </td>
         <td colspan="1"> 查询指定交易信息 </td>
     </tr>
+    <tr> <!-- txpool -->
+        <td rowspan="2"> txpool </td>
+        <td colspan="1"> txpool.status </td>
+        <td colspan="1"> 查看交易池中等待被打包的交易 </td>
+    </tr>
+    <tr>
+        <td colspan="1"> txpool.inspect.pending </td>
+        <td colspan="1"> 查看已提交但还未被处理的交易，pending表示已提交但还未被处理的交易 </td>
+    </tr>
+    
    
 </table>
 
