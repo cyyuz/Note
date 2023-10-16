@@ -1,3 +1,8 @@
+
+# 初始化
+```sh
+geth --datadir ./私链文件夹名 init genesis.json
+```
 # 控制台指令
 <table>
     <tr> <!-- 第一行数据 -->
