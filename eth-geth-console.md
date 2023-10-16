@@ -32,13 +32,9 @@ geth --datadir ./私链文件夹名 init genesis.json
         <td colspan="1"> personal.unlockAccount(eth.accounts[0],"123",0) </td>
         <td colspan="1"> 解锁账户 </td>
     </tr>
-    
     <tr> <!-- eth -->
         <td rowspan="1">eth</td>
         <td colspan="1">eth.accounts</td>
         <td colspan="1"></td>
     </tr>
-
-
-    
 </table>
