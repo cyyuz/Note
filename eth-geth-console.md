@@ -1,6 +1,6 @@
 
 # 初始化
-```sh
+```shell
 geth --datadir ./data1 init genesis.json
 ```
 - genesis.json
@@ -36,6 +36,14 @@ geth --datadir ./data1 init genesis.json
 }
 ```
 > Returned error: invalid opcode: SHR    创世区块的genesis.json的问题
+
+# 启动
+```shell
+geth --http --http.api db,eth,net,web3,personal --datadir ./data1/ --networkid 1997 console 2>> log2020526.log --http.addr 192.168.16.134 --allow-insecure-unlock --rpc.txfeecap 0 --rpc.gascap 0
+
+geth attach geth.ipc
+```
+
 
 # 控制台指令
 <table>
