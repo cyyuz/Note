@@ -40,7 +40,7 @@ geth --datadir ./data init genesis.json
 # 启动
 - 启动节点
 ```shell
-geth --http --http.api db,eth,net,web3,personal --datadir ./data/ --networkid 1997 console 2>> log2020526.log --http.addr 192.168.16.134 --allow-insecure-unlock --rpc.txfeecap 0 --rpc.gascap 0
+geth --http --http.api db,eth,net,web3,personal --datadir ./data/ --networkid 1997 console 2>> log-out.log --http.addr 192.168.16.134 --allow-insecure-unlock --rpc.txfeecap 0 --rpc.gascap 0
 ```
 - 启动新控制台
 ```shell
