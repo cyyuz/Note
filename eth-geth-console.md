@@ -1,7 +1,7 @@
 
 # 初始化
 ```shell
-geth --datadir ./data1 init genesis.json
+geth --datadir ./data init genesis.json
 ```
 - genesis.json
 ```json
