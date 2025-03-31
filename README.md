@@ -1,8 +1,10 @@
-# [设计模式](https://github.com/cyyuz/Note/blob/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)
+# C++
 
 # 计算机网络
 
-[三次握手][tcp_handshake]  |  [四次挥手][tcp_close]
+[三次握手][tcp_handshake] | [四次挥手][tcp_close]
+
+# 操作系统
 
 # 区块链
 
