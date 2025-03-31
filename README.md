@@ -2,7 +2,7 @@
 
 # 计算机网络
 
-[三次握手][tcp_handshake]  [四次挥手][tcp_close]
+[三次握手][tcp_handshake]  |  [四次挥手][tcp_close]
 
 # 区块链
 
