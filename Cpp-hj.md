@@ -189,28 +189,6 @@ void real(double r) { re = r; }   //重载正确
 ?real@Complex@@QBENXZ     
 ?real@Complex@@QAENABN@Z   //两个real名称相同，但编译后的实际名称不同（参数不同）
 ```
-## 3.8 Singleton(单例)设计模式
-把构造函数放在private,只允许外界创建一个例子
-```cpp
-class A
-{
-public:
-    static A& getInstance();
-    setup() {...}
-private:
-    A();
-    A(const A& rhs);
-    ...
-};
-
-A& A::getInstance()
-{
-    static A a;
-    return a;
-}
-
-A::getInstance().setup();   //通过调用这个函数创建对象
-```
 ## 3.9 const成员函数
 对class里面的函数分为```会改变数据```和```不会改变数据```两种，不会改变数据内容的加上```const```
 ```cpp
