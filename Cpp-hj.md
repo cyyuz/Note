@@ -107,17 +107,7 @@ private:
     ...
 }
 ```
-## 3.4 inline（内联）函数
-如果函数在```class body```内定义，自动成为```inline候选```，如果在class本体外定义就不是inline。
-inline只是对编译器的建议，由编译器决定，如果函数太复杂，编译器就没有能力把函数变成inline。
 
-```cpp     
-inline double        //如果在body外定义,可以在前面加上inline 
-imag(const complex& x)
-{
-    return x.imag ();
-}
-```
 ## 3.5 访问级别
 ```public```：公开的外界能看得到  ```函数```
 ```private```：只有class自己能看得到   ```数据```封装起来，不希望随便调用

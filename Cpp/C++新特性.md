@@ -106,11 +106,20 @@ lambda 默认有 `inline` 属性。
 - 局限于一个局部作用城中使用的代码逻辑。
 - 这些代码逻辑需要被作为参数传递。
 
-
-
 lambda的类型被定义为“闭包”(closure)的类，而每个 lambda 表达式则会产生一个闭包类型的临时对象(右值)。因此 lambda 函数并非函数指针。不过 C++11 标准却允许 lambda 表达是向函数指针的转换，前提是 lambda 函数没有捕捉任何变量，且函数指针所示的函数原型，必须跟 lambda 函数有着相同的调用方式。
 
 ## inline
+
+如果函数在```class body```内定义，自动成为```inline候选```，如果在 class 本体外定义就不是 inline。
+inline 只是对编译器的建议，由编译器决定，如果函数太复杂，编译器就没有能力把函数变成 inline。
+
+```cpp     
+inline double  //如果在body外定义,可以在前面加上inline 
+imag(const complex& x)
+{
+    return x.imag ();
+}
+```
 
 ## std::function和bind
 
