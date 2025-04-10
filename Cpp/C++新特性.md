@@ -86,19 +86,14 @@ int main() {
 ```c++
 class functor {
 public :
-	int operator()(int x,int y){return x+y;}
+	int operator()(int x,int y){return x+y;}  // operator()被重载
 };
-
 int main(){
 	int girls=3，boys =4;
-    functor totalChild;
-    return totalChild(5，6);
+    functor totalChild;          
+    return totalChild(5，6);  // totalChild 不是函数名称，而是对象名称
 }
 ```
-
-`class_functor` 的 `operator()` 被重载，totalChild 不是函数名称，而是对象名称。
-
-相比于函数，仿函数可以拥有初始状态，一般通过 class 定义私有成员，并在声明对象的时候对其进行初始化。
 
 **lambda和仿函数**都可以捕捉一些变量作为初始状态并接受参数进行运算。lambda 函数捕捉了作用域数据，而仿函数则以作用域数据初始化类。lambda的捕捉列表中的变量都会成为等价仿函数的成员变量，而常量成员函数(如operator())中改变其值是不允许的。
 
@@ -113,7 +108,7 @@ lambda 默认有 `inline` 属性。
 
 
 
-lambda的类型被定义为“闭包”(closure)的类，而每个lambda表达式则会产生一个闭包类型的临时对象(右值)。因此 lambda 函数并非函数指针。不过C++11标准却允许lambda表达是向函数指针的转换，前提是lambda 函数没有捕捉任何变量，且函数指针所示的函数原型，必须跟lambda 函数有着相同的调用方式。
+lambda的类型被定义为“闭包”(closure)的类，而每个 lambda 表达式则会产生一个闭包类型的临时对象(右值)。因此 lambda 函数并非函数指针。不过 C++11 标准却允许 lambda 表达是向函数指针的转换，前提是 lambda 函数没有捕捉任何变量，且函数指针所示的函数原型，必须跟 lambda 函数有着相同的调用方式。
 
 ## inline
 
