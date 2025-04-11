@@ -10,7 +10,7 @@
 
 ### C++11
 
-[智能指针][smart_pointer] | [lambda][lambda_] | [内存对齐_alignof_alignas][alignof_alignas]
+[智能指针][smart_pointer] | [lambda][lambda_] | [内存对齐_alignof_alignas][alignof_alignas] [移动语义][move_semantics]
 
 ## C++网络编程
 
@@ -20,8 +20,9 @@
 [pragma]:      https://github.com/cyyuz/Note/blob/master/Cpp/C++语法.md#内存对齐
 
 [smart_pointer]:   https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#智能指针
-[alignof_alignas]: https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#内存对齐_alignof_alignas
+[alignof_alignas]: https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#alignof_alignas
 [lambda_]:         https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#lambda
+[move_semantics]:  https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#移动语义
 
 [byte_order]: https://github.com/cyyuz/Note/blob/master/C%2B%2B.md#字节序
 

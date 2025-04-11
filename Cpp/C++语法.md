@@ -78,7 +78,7 @@ void main()
 }
 ```
 
-C++11内存对其的方法：[alignof / alignas](https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#内存对齐_alignof_alignas)。
+C++11内存对其的方法：[alignof / alignas](https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#alignof_alignas)。
 
 # 面向对象编程
 
