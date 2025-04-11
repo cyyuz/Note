@@ -13,7 +13,7 @@
 [字节序][byte_order]
 
 [empty_class]: https://github.com/cyyuz/Note/blob/master/C%2B%2B.md#空类
-[smart_pointer]: https://github.com/cyyuz/Note/blob/master/Cpp/C%2B%2B新特性.md#智能指针  
+[smart_pointer]: https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#智能指针  
 [byte_order]: https://github.com/cyyuz/Note/blob/master/C%2B%2B.md#字节序
 
 # 2 计算机网络
