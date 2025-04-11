@@ -169,7 +169,7 @@ imag(const complex& x)
 
 ## 移动语义
 
-## 内存对齐alignof/alignas
+## 内存对齐_alignof_alignas
 
 `alignof` 用来获取平台的内存对齐大小，返回值 `std::size_t` 类型。
 
