@@ -16,13 +16,15 @@
 
 [字节序][byte_order]
 
-[empty_class]: https://github.com/cyyuz/Note/blob/master/C++.md#空类
-[pragma]: https://github.com/cyyuz/Note/blob/master/C++.md#内存对齐
+[empty_class]: https://github.com/cyyuz/Note/blob/master/Cpp/C++语法.md#空类
+[pragma]:      https://github.com/cyyuz/Note/blob/master/Cpp/C++语法.md#内存对齐
 
-[smart_pointer]: https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#智能指针
+[smart_pointer]:   https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#智能指针
 [alignof_alignas]: https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#内存对齐_alignof_alignas
+[lambda_]:         https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#lambda
+
 [byte_order]: https://github.com/cyyuz/Note/blob/master/C%2B%2B.md#字节序
-[lambda_]: https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#lambda
+
  
 
 # 计算机网络
