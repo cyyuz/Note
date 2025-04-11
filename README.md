@@ -10,7 +10,8 @@
 
 ### C++11
 
-[智能指针][smart_pointer] | [lambda][lambda_] | [alignof_alignas][alignof_alignas] | [移动语义][move_semantics]
+[智能指针][smart_pointer] | [lambda][lambda_] | [移动语义][move_semantics]
+[alignof_alignas][alignof_alignas]
 
 ## C++网络编程
 

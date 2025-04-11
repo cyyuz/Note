@@ -254,6 +254,10 @@ int main() {
 
 `std::max_align_t` 用来返回当前平台的最大默认内存对齐大小。 
 
+## decltype
+
+## initializer_list
+
 # C++14
 
 
