@@ -6,43 +6,80 @@
 
 ## 智能指针
 
-### 显示内存管理的问题
+**显示内存管理的问题：**
 
 - 野指针：一些内存单元已释放，指向它的指针却还在被使用。这些内存可能被运行时系统重新分配给程序使用，从而导致无法预测的错误。
 - 重复释放：释放已经被释放过的内存，或者释放已经被重新分配过的内存，就会导致重复释放错误。
 - 内存泄漏：不再需要使用的内存如果没有被释放就会导致内存泄漏。如果程序不断地重复进行这类操作，将会导致内存占用剧增。
 
-### 什么是智能指针
+**引用计数：**为了防止内存泄露而产生的。对于动态分配的对象，进行引用计数，每增加一次对同一个对象的引用，引用对象的引用计数就会加一，每删除一次引用，引用计数就会减一，当减为零时，就自动释放指向的堆内存。  
 
-以对象的方式管理堆分配的内存，并在适当的时间（指针对象析构、调用reset成员），释放所获得的堆内存。避免堆内存忘记释放而造成的问题。
-
-### auto_ptr
-
-在C++98中，智能指针通过一个模板类型 “auto_ptr” 来实现。
-
-auto_ptr有一些缺点（拷贝时返回一个左值，不能调用 delete[] 等），所以在 C++11标准中被废弃了。
+**RAII：**对于一个对象，在构造函数的时候申请空间，而在析构函数（在离开作用域时调用）释放空间，也就是 RAII 资源获取即初始化技术。  
 
 ### unique_ptr
 
-unique_ptr 不能与其他 unique_ptr 类型的指针对象共享所指对象的内存，仅能通过move函数转移所有权。
+`unique_ptr` 是一种独占的智能指针，不能与其他指针指向同一个对象。可以用 `std::move` 转移给其他的 `unique_ptr`。
 
-从实现上看，unique_ptr 是一个删除了拷贝构造函数、保留了移动构造函数的指针封装类型。
+`unique_ptr` 是一个删除了拷贝构造函数，保留了移动构造函数的指针封装类型。
+
+```c++
+std::unique_ptr<int> up1(std::make_unique<int>(10));
+std::unique_ptr<int> up2(std::move(p1));
+```
 
 ### shared_ptr
 
-shared_ptr 允许多个该智能指针共享地 “拥有” 同一堆分配对象的内存。
+`shared_ptr` 允许多个智能指针指向一个对象，并通过**引用计数**记录多少个 `shared_ptr` 指向该对象，当引用计数为零的时候就会自动释放对象，从而避免显示调用 `delete`。
 
-在实现上采用引用计数，当一个shared_ptr 指针失效只会导致引用计数降低，其他的 shared_ptr 对对象内存的引用并不会受到影响。只有在引用计数归零的时候，share_ptr 才会真正释放所占有的堆内存的空间。
+```c++
+auto pointer1 = std::make_shared<int>(10);
+auto pointer2 = pointer; // 引用计数 +1
+int *p = pointer.get(); // 这样不会增加引用计数
+
+std::cout << "pointer1.use_count() = " << pointer1.use_count() << std::endl; // 2
+std::cout << "pointer2.use_count() = " << pointer2.use_count() << std::endl; // 2
+
+pointer2.reset();
+std::cout << "pointer1.use_count() = " << pointer1.use_count() << std::endl; // 1
+std::cout << "pointer2.use_count() = " << pointer2.use_count() << std::endl; // 0, pointer2 已 reset
+```
 
 ### weak_ptr
 
-weak_ptr 可以指向 shared_ptr 指针指向的对象内存，却并不拥有该内存。
+**循环引用：**
 
-使用 weak_ptr 成员 lock，可返回其指向内存的一个 shared_ptr 对象，在所指对象内存已经无效时，返回指针空值 nullptr。可以验证 shared_ptr 指针的有效性。
+```c++
+struct A;
+struct B;
+struct A {
+	std::shared_ptr<B> pointer;
+    ~A() {
+    	std::cout << "A 被销毁" << std::endl;
+    }
+};
+struct B {
+	std::shared_ptr<A> pointer;
+    ~B() {
+    	std::cout << "B 被销毁" << std::endl;
+    }
+};
+int main() {
+    auto a = std::make_shared<A>();
+    auto b = std::make_shared<B>();
+    a->pointer = b;
+    b->pointer = a;
+}
+```
 
-只有 shared_ptr 参与了引用计数，而 weak_ptr 没有影响其指向的内存的引用计数。
+运行结果是 a,b 的内存都不会被销毁，因为 a,b 内部的 pointer 互相引用，使得 a,b 的引用计数都变为了 2，离开作用域时， a,b 被析构，却只能让引用计数减一，a,b 指向的内存区域引用计数不为零，而外部已经没有办法找到这块内存了，就造成了**内存泄露**。
 
-> shared ptr及weak ptr 可用在用户需要引用计数的地方。
+![image-20250411104112776](img/智能指针-循环引用.png)
+
+> 在析构函数中显示的 reset() share_ptr 成员变量可以让引用计数减小到0，但这就和手动 delete 一样了。
+
+`weak_ptr` 是一种弱引用，可以指向 `shared_ptr` 指向的内存，而不会增加引用计数。
+
+`std::weak_ptr` 没有 `*` 运算符和 `->` 运算符，所以不能够对资源进行操作，其 `expired()` 方法能在资源未被释放时，会返回 false，否则返回 true，检查 `shared_ptr` 是否存在。`lock()` 方法返回其指向内存的一个 `shared_ptr` 对象，在所指对象内存已经无效时，返回指针空值 `nullptr`。
 
 ## lambda
 
