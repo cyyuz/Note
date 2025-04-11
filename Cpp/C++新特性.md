@@ -167,11 +167,35 @@ imag(const complex& x)
 
 
 
-## 移动构造和
+## 移动语义
 
+## 内存对齐alignof/alignas
 
+`alignof` 用来获取平台的内存对齐大小，返回值 `std::size_t` 类型。
 
+`alignas` 指定内存对齐大小，只要是一个编译期数值（#define, static const, template）都支持alignas，alignas只能改大不能改小。
 
+```c++
+struct Storage {
+    char a;
+    int b;
+    double c;
+    long long d;
+};
+struct alignas(std::max_align_t) AlignasStorage {
+    char a;
+    int b;
+    double c;
+    long long d;
+};
+int main() {
+    std::cout << alignof(Storage) << std::endl;
+    std::cout << alignof(AlignasStorage) << std::endl;
+    return 0;
+}
+```
+
+`std::max_align_t` 用来返回当前平台的最大默认内存对齐大小。 
 
 # C++14
 

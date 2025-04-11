@@ -44,9 +44,41 @@ c++内存对齐有哪几种方式
 
 ## delete / free
 
+
+
 ## 内存对齐
 
+采用 `#pragma pack()` 方法实现内存对齐：
 
+```c++
+#pragma pack(push, 1)
+struct A
+{
+    char a;
+    int b;
+    double c;
+    char d[11];
+};
+#pragma pack(pop)
+
+#pragma pack(push, 2)
+struct B
+{
+    char a;
+    int b;
+    double c;
+    char d[11];
+};
+#pragma pack(pop)
+
+void main()
+{
+    cout << sizeof(A) << endl;  // 24 
+    cout << sizeof(B) << endl;  // 26
+}
+```
+
+C++11内存对其的方法：[alignof / alignas](https://github.com/cyyuz/Note/blob/master/Cpp/C++新特性.md#内存对齐alignof/alignas)。
 
 # 面向对象编程
 
@@ -64,7 +96,7 @@ c++内存对齐有哪几种方式
 
 编译器默认的拷贝构造、拷贝赋值是浅拷贝，只是拷贝对象里值。
 
-## 移动构造和移动赋值
+
 
 ## 虚函数
 
@@ -101,7 +133,7 @@ A& A::getInstance()
 A::getInstance().setup();   //通过调用这个函数创建对象
 ```
 
-## 菱形继承
+## 虚继承
 
 **虚继承（Virtual Inheritance）是C++中解决多重继承中的菱形继承问题（Diamond Problem）**的一种机制。它允许派生类共享基类的唯一实例，避免出现同一个基类被继承多次的情况。
 菱形继承问题：
